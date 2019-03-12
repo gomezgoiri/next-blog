@@ -54,5 +54,6 @@ module.exports = {
       posts,
       paths
     ) // aliases
-  }
+  },
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/next-blog' : ''
 }

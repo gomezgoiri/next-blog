@@ -23,6 +23,7 @@
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.12.4",
+    "gh-pages": "^2.0.1",
     "processmd": "^4.4.2",
     "standard": "^12.0.1"
   },
@@ -34,7 +35,7 @@
     "build:export": "npm run build && npm run export",
     "export": "next export && cp -R static/* out/",
     "deploy": "npm run build:content && npm run build:export",
-    "deploy:gh": "npm run deploy && touch out/.nojekyll && git add out/ && git commit -m \"Deploy Next.js to gh-pages\" && git subtree push --prefix out origin gh-pages",
+    "deploy:gh": "npm run deploy && touch out/.nojekyll && gh-pages -d out --dotfiles",
     "server": "NODE_ENV=production node server.js",
     "format": "prettier --write \"**/*.+(js|json|md|yml)\"",
     "lint": "eslint \"pages/**/*.+(js|jsx)\" \"src/**/*.+(js|jsx)\" --fix || echo 'Check your code!'",
