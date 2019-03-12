@@ -1,14 +1,9 @@
 ---
-siteTitle: "Next Blog"
-description: "A blog built using next and processmd"
-stylesheets:
-  - "https://unpkg.com/tachyons@4.7.4/css/tachyons.min.css"
-topLinks:
-  - text: "Blog"
-    href: "/"
-  - text: "Github"
-    href: "https://github.com/tscanlin/"
-backgroundClass: "bg-dark-gray"
-copyright: "Tim Scanlin"
-siteId: ""
+siteTitle: 'Aitor Gómez Goiri'
+description: "Aitor's personal website"
+gravatar: b0f00a2ea95fb62954454074a4a6fc28
+web: http://gomezgoiri.net
+twitter: gomezgoiri
+github: gomezgoiri
+linkedin: gomezgoiri
 ---
