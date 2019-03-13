@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 
 import Page from '../src/components/Page'
@@ -13,7 +13,7 @@ const SearchContainer = styled.div`
 const NotFoundPage = () => (
   <Page siteTitle={title} heroTitle={title}>
     <img
-      class="avatar"
+      className="avatar"
       src={`${process.env.ASSET_PREFIX}/static/img/404_thinking.jpg`}
       alt="Me thinking what to do now that you got a 404 error"
       width="200"
