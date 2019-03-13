@@ -34,7 +34,7 @@ const createSubsectionDict = ({ base, dir, subsection }) =>
     .sort((a, b) => a.subsectionOrder - b.subsectionOrder)
     .map(file => ({
       title: file.title,
-      url: file.base.split('.')[0],
+      url: makeUrl(file),
       selected: base === file.base
     }))
 

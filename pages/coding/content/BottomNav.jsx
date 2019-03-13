@@ -8,18 +8,14 @@ const BottomNav = ({ prev, next }) => (
       {prev && (
         <li className="previous">
           <Link href={prev.url}>
-            <a>
-              <span aria-hidden="true">←</span> {prev.title}
-            </a>
+            <span aria-hidden="true">←</span> {prev.title}
           </Link>
         </li>
       )}
       {next && (
         <li className="next">
           <Link href={next.url}>
-            <a>
-              {next.title} <span aria-hidden="true">→</span>
-            </a>
+            {next.title} <span aria-hidden="true">→</span>
           </Link>
         </li>
       )}

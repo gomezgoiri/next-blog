@@ -6,37 +6,27 @@ const NavBar = () => (
   <nav className="navbar navbar-default">
     <Container>
       <div className="navbar-header">
-        <a className="navbar-brand" href="/">
+        <Link className="navbar-brand" href="/">
           Aitor Gómez Goiri
-        </a>
+        </Link>
       </div>
 
       <div className="collapse navbar-collapse navbar-right">
         <ul className="nav navbar-nav">
           <li>
-            <Link href="/">
-              <a>Home</a>
-            </Link>
+            <Link href="/">Home</Link>
           </li>
           <li>
-            <Link href="/projects.html">
-              <a>Projects</a>
-            </Link>
+            <Link href="/projects.html">Projects</Link>
           </li>
           <li>
-            <Link href="/publications.html">
-              <a>Publications</a>
-            </Link>
+            <Link href="/publications.html">Publications</Link>
           </li>
           <li>
-            <Link href="/research_projects.html">
-              <a>R&amp;D Projects</a>
-            </Link>
+            <Link href="/research_projects.html">R&amp;D Projects</Link>
           </li>
           <li>
-            <Link href="/teaching.html">
-              <a>Teaching</a>
-            </Link>
+            <Link href="/teaching.html">Teaching</Link>
           </li>
         </ul>
       </div>

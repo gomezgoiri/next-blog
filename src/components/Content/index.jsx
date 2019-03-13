@@ -22,8 +22,8 @@ const Content = ({
               <ul className="nav navbar-nav">
                 {topLinks.map(link => (
                   <li key={link.href} className="active">
-                    <Link href={link.href}>
-                      <a className="link">{link.text}</a>
+                    <Link href={link.href} className="link">
+                      {link.text}
                     </Link>
                   </li>
                 ))}

@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
+import Link from '../../../src/components/Link'
 import PublicationIcons from '../PublicationIcons'
 
 const Title = styled.span`
@@ -11,18 +12,14 @@ const Title = styled.span`
 const Item = ({ title, url, authors, restCitation, ...other }) => (
   <span itemScope itemType="http://schema.org/ScholarlyArticle">
     <p>
-      {authors}
-.
-      <Title itemProp="name">{title}</Title>
-
+      {authors}.<Title itemProp="name">{title}</Title>
       .
       <span dangerouslySetInnerHTML={{ __html: restCitation }} />
     </p>
     <p>
-      <a href={url} itemProp="url">
-
+      <Link href={url} itemProp="url">
         Read more...
-      </a>
+      </Link>
     </p>
 
     <PublicationIcons {...other} />

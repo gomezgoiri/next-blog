@@ -7,10 +7,13 @@ const Headings = ({ title = '', subtitle, href }) => {
 
   if (href) {
     value = (
-      <Link href={href}>
-        <a rel="bookmark" title="Permanent link to " itemProp="url">
-          {value}
-        </a>
+      <Link
+        href={href}
+        rel="bookmark"
+        title="Permanent link to "
+        itemProp="url"
+      >
+        {value}
       </Link>
     )
   }

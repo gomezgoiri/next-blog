@@ -47,11 +47,7 @@ const CodingPost = ({
         {date && (
           <div className="row" style={{ marginBottom: '20px' }}>
             <div className="col-sm-12">
-              <p>
-
-                Published on
-                {new Date(date).toLocaleDateString()}
-              </p>
+              <p>Published on {new Date(date).toLocaleDateString()}</p>
             </div>
           </div>
         )}

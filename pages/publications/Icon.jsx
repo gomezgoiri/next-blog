@@ -1,10 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Link from '../../src/components/Link'
 
 const Icon = ({ href, src, alt, ...other }) => (
-  <a href={href} {...other}>
+  <Link href={href} {...other}>
     <img src={`${process.env.ASSET_PREFIX}/static/img/${src}`} alt={alt} />
-  </a>
+  </Link>
 )
 
 Icon.propTypes = {

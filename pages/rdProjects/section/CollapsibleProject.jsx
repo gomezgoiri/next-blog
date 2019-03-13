@@ -1,7 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+
 import CollapsiblePanel from '../../../src/components/CollapsiblePanel'
+import Link from '../../../src/components/Link'
 import { makeUrl } from '../../../src/utils/content'
+
+const rightMargin = { marginRight: '0.3em' }
 
 const CollapsibleProject = ({
   title,
@@ -12,17 +16,20 @@ const CollapsibleProject = ({
   ...other
 }) => (
   <CollapsiblePanel expanded={expanded} title={title} onCollapse={onCollapse}>
-    <div dangerouslySetInnerHTML={{ __html: preview }} />
+    <p dangerouslySetInnerHTML={{ __html: preview }} />
     <div className="text-right">
-      <a role="button" className="btn btn-default" href={website}>
-
+      <a
+        href={website}
+        role="button"
+        className="btn btn-default"
+        style={rightMargin}
+      >
         Go to website
       </a>
 
-      <a role="button" className="btn btn-info" href={makeUrl(other)}>
-
+      <Link href={makeUrl(other)} role="button" className="btn btn-info">
         Read more
-      </a>
+      </Link>
     </div>
   </CollapsiblePanel>
 )
@@ -32,7 +39,7 @@ CollapsibleProject.propTypes = {
   website: PropTypes.string,
   preview: PropTypes.string,
   expanded: PropTypes.bool,
-  bodyHtml: PropTypes.element,
+  bodyHtml: PropTypes.node,
   short: PropTypes.string,
   start: PropTypes.string,
   end: PropTypes.string,

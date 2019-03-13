@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import Link from '../../../src/components/Link'
 
 const Bold = styled.span`
   font-weight: bold;
@@ -17,7 +18,6 @@ const SubsectionDropdown = ({ subsections }) => (
         aria-haspopup="true"
         aria-expanded="false"
       >
-
         Subsections
         <span className="caret" />
       </a>
@@ -29,7 +29,7 @@ const SubsectionDropdown = ({ subsections }) => (
                 <Bold>{s.title}</Bold>
               </a>
             ) : (
-              <a href={s.url}>{s.title}</a>
+              <Link href={s.url}>{s.title}</Link>
             )}
           </li>
         ))}

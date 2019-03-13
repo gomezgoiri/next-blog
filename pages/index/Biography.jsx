@@ -62,8 +62,11 @@ const Biography = ({ gravatar, author }) => (
             in 2008 and a MSc in{' '}
             <a href="http://www.diss.deusto.es/">Software Development</a> in
             2010 and{' '}
-            <Link href="publications/gomezgoiri-semantic.html">
-              <a style={boldStyle}>my PhD</a>
+            <Link
+              href="publications/gomezgoiri-semantic.html"
+              style={boldStyle}
+            >
+              my PhD
             </Link>{' '}
             in 2014 at the
             <span

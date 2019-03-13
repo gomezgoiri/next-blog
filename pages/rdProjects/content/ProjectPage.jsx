@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+
 import Page from '../../../src/components/Page'
+import Link from '../../../src/components/Link'
 
 const ProjectPage = ({
   title,
@@ -34,15 +36,13 @@ const ProjectPage = ({
         <div className="col-sm-12 text-center">
           {website && (
             <a role="button" className="btn btn-default" href={website}>
-
               Go to website
             </a>
           )}
           {moreInfo && (
-            <a role="button" className="btn btn-default" href={moreInfo}>
-
+            <Link role="button" className="btn btn-default" href={moreInfo}>
               More information
-            </a>
+            </Link>
           )}
         </div>
       </div>
