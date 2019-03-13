@@ -2,9 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Page from '../src/components/Page'
-
-const title = 'Page Not Found'
-const cx = '003123041647642216693:z-wgm1zzozk'
+import { title, cx } from '../content/404.json'
 
 const SearchContainer = styled.div`
   width: 500px;
@@ -26,7 +24,7 @@ const NotFoundPage = () => (
 
     <SearchContainer>
       <script
-        async="true"
+        async
         src={`https://cse.google.com/cse.js?cx=${cx}`}
         type="text/javascript"
       />
