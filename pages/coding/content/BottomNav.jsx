@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Link from 'next/link'
+import Link from '../../../src/components/Link'
 
 const BottomNav = ({ prev, next }) => (
   <nav>
@@ -9,9 +9,7 @@ const BottomNav = ({ prev, next }) => (
         <li className="previous">
           <Link href={prev.url}>
             <a>
-              <span aria-hidden="true">←</span> 
-              {' '}
-              {prev.title}
+              <span aria-hidden="true">←</span> {prev.title}
             </a>
           </Link>
         </li>
@@ -20,9 +18,7 @@ const BottomNav = ({ prev, next }) => (
         <li className="next">
           <Link href={next.url}>
             <a>
-              {next.title} 
-              {' '}
-              <span aria-hidden="true">→</span>
+              {next.title} <span aria-hidden="true">→</span>
             </a>
           </Link>
         </li>

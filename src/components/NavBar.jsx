@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'next/link'
+import Link from './Link'
 import Container from './Container'
 
 const NavBar = () => (
@@ -7,7 +7,6 @@ const NavBar = () => (
     <Container>
       <div className="navbar-header">
         <a className="navbar-brand" href="/">
-
           Aitor Gómez Goiri
         </a>
       </div>

@@ -1,3 +1,4 @@
+const webpack = require('webpack')
 const SUMMARY_JSON = require('./content/summary.json')
 
 const FOLDER_PREFIX_TO_PAGE = {
@@ -17,6 +18,8 @@ const getPage = (file, page) => {
 
   return found ? FOLDER_PREFIX_TO_PAGE[found] : '/rdProjects/content'
 }
+
+const assetPrefix = process.env.NODE_ENV === 'production' ? '/next-blog' : ''
 
 module.exports = {
   exportPathMap: () => {
@@ -55,5 +58,14 @@ module.exports = {
       paths
     ) // aliases
   },
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/next-blog' : ''
+  assetPrefix,
+  webpack: config => {
+    config.plugins.push(
+      new webpack.DefinePlugin({
+        'process.env.ASSET_PREFIX': JSON.stringify(assetPrefix)
+      })
+    )
+
+    return config
+  }
 }

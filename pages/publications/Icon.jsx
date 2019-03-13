@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 const Icon = ({ href, src, alt, ...other }) => (
   <a href={href} {...other}>
-    <img src={`/static/img/${src}`} alt={alt} />
+    <img src={`${process.env.ASSET_PREFIX}/static/img/${src}`} alt={alt} />
   </a>
 )
 

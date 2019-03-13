@@ -36,7 +36,11 @@ const Header = ({ siteTitle, description }) => (
     />
 
     {/* Syntax highlighting CSS */}
-    <link rel="stylesheet" type="text/css" href="/static/css/syntax.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href={`${process.env.ASSET_PREFIX}/static/css/syntax.css`}
+    />
   </Head>
 )
 
