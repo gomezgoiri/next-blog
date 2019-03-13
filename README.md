@@ -1,12 +1,7 @@
-# next-blog
+# gomezgoiri.github.com
 
-Markdown based blog using [next](https://github.com/zeit/next.js/). It also uses [processmd](https://github.com/tscanlin/processmd) to compile the markdown files and watch for changes (disclaimer: another project of mine).
-
-[![Mentioned in Awesome Next JS](https://awesome.re/mentioned-badge.svg)](https://github.com/unicodeveloper/awesome-nextjs)
-
-Clone this repo and use it as a starting point for your own blog.
-
-![next blog screenshot](https://raw.githubusercontent.com/tscanlin/next-blog/master/static/assets/images/next-blog-screenshot.png)
+My personal website using [next](https://github.com/zeit/next.js/).
+The base project is [next-blog](https://github.com/tscanlin/next-blog).
 
 **NOTE:** Make sure to run `npm run build:content` before `npm start` for the first time.
 
@@ -34,6 +29,8 @@ npm start
 npm run build
 ```
 
-## TODO
+## Deploy in Github pages
 
-- Add RSS feed support
+```sh
+npm run deploy
+```
